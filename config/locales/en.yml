@@ -6,3 +6,8 @@ en:
     admin:
       tab:
         suppliers: Suppliers
+  activerecord:
+    models:
+      spree/supplier:
+        one: Supplier
+        other: Suppliers
