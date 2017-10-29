@@ -1,0 +1,17 @@
+<% admin_breadcrumb(link_to plural_resource_name(Spree::Supplier), spree.admin_suppliers_path) %>
+<% admin_breadcrumb(@supplier.name) %>
+
+<% content_for :page_title do %>
+  <%= "#{Spree.t(:editing_supplier)} - #{@supplier.name}" %>
+<% end %>
+
+<%= render 'spree/shared/error_messages', target: @supplier %>
+
+<%= form_for [:admin, @supplier] do |f| %>
+  <%= render 'form', f: f %>
+  <div class="col-md-8">
+  <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+  </div>
+<% end %>
+
+

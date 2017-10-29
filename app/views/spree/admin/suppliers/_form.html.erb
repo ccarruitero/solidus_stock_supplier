@@ -1,0 +1,20 @@
+<div class="col-md-6">
+  <fieldset class="no-border-bottom">
+    <%= f.field_container :name do %>
+      <%= f.label :name, class: 'required' %>
+      <%= f.text_field :name, class: 'fullwidth', required: true %>
+    <% end %>
+    <%= f.field_container :uid do %>
+      <%= f.label :uid, class: 'required' %>
+      <%= f.number_field :uid, class: 'fullwidth', required: true %>
+    <% end %>
+    <%= f.field_container :email do %>
+      <%= f.label :email, t('spree.email') %>
+      <%= f.email_field :email, class: 'fullwidth' %>
+    <% end %>
+    <%= f.field_container :phone do %>
+      <%= f.label :phone, t('spree.phone') %>:<br />
+      <%= f.text_field :phone, class: 'fullwidth' %>
+    <% end %>
+  </fieldset>
+</div>
