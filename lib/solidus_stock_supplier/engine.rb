@@ -9,6 +9,16 @@ module SolidusStockSupplier
       g.test_framework :rspec
     end
 
+    initializer 'solidus_stock_supplier.menu', before: :load_config_initializers do
+      Spree::Backend::Config.configure do |config|
+        config.menu_items << config.class::MenuItem.new(
+          [:suppliers],
+          'home',
+          condition: -> { can?(:admin, :suppliers) }
+        )
+      end
+    end
+
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
