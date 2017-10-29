@@ -13,7 +13,7 @@ module SolidusStockSupplier
       Spree::Backend::Config.configure do |config|
         config.menu_items << config.class::MenuItem.new(
           [:suppliers],
-          'home',
+          'industry',
           condition: -> { can?(:admin, :suppliers) }
         )
       end
