@@ -5,10 +5,6 @@
   <%= button_link_to Spree.t('back_to_suppliers'), spree.admin_suppliers_path, icon: 'arrow-left' %>
 <% end %>
 
-<% content_for :page_title do %>
-   <%= Spree.t('new_supplier') %>
-<% end %>
-
 <%= render 'spree/shared/error_messages', target: @supplier %>
 
 <%= form_for [:admin, @supplier] do |f| %>
