@@ -1,6 +1,8 @@
 module Spree
   class Supplier < Spree::Base
-    has_many :stock_locations, class_name: 'Spree::SupplierStockLocation'
+    has_many :stock_locations,
+      class_name: 'Spree::SupplierStockLocation',
+      dependent: :destroy
 
     validates :name, :uid, presence: true, uniqueness: true
 
