@@ -1,0 +1,1 @@
+Spree::StockLocation.include SolidusStockSupplier::LocationScopesConcern

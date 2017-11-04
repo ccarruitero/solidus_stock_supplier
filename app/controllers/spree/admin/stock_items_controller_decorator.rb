@@ -1,0 +1,1 @@
+Spree::Admin::StockItemsController.prepend SolidusStockSupplier::StockItemsControllerExtension
