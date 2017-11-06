@@ -1,7 +1,7 @@
 SolidusStockSupplier
 ====================
 
-Introduction goes here.
+Adds support to receive stock from supplier in Solidus Admin
 
 Installation
 ------------
@@ -29,11 +29,8 @@ bundle
 bundle exec rake
 ```
 
-When testing your applications integration with this extension you may use it's factories.
-Simply add this require statement to your spec_helper:
-
 ```ruby
 require 'solidus_stock_supplier/factories'
 ```
 
-Copyright (c) 2017 [name of extension creator], released under the New BSD License
+Copyright (c) 2017 César Carruitero and [contributors](https://github.com/ccarruitero/solidus_stock_supplier/graphs/contributors), released under the New BSD License
